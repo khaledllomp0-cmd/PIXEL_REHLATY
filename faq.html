@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlRoot">
+<head>
+    <meta name="description" content="شركة بكسل رحلتي لتأجير شاشات LED و P2 الداخلية والخارجية وتنظيم وتجهيز المعارض والمؤتمرات في المملكة العربية السعودية بأعلى دقة واحترافية.">
+    <meta name="keywords" content="تأجير شاشات, شاشات P2, شاشات LED, تنظيم فعاليات, تنظيم مؤتمرات, تأجير شاشات الرياض, بكسل رحلتي, Event Management Saudi">
+    <meta name="robots" content="faq, follow">
+    <meta name="author" content="Pixel Rehlaty">
+
+    <link rel="canonical" href="https://pixelrehlaty.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelrehlaty.com/">
+    <meta property="og:title" content="بكسل رحلتي | تأجير الشاشات وتنظيم الفعاليات والمؤتمرات">
+    <meta property="og:description" content="حلول مرئية متكاملة، تأجير شاشات P2 فائقة الوضوح وإدارة شاملة للمؤتمرات والفعاليات.">
+    <meta property="og:image" content="https://pixelrehlaty.com/logos/logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="بكسل رحلتي | شاشات LED وتنظيم فعاليات">
+    <meta name="twitter:description" content="تأجير شاشات عرض P2 وتنظيم وتجهيز الفعاليات والمعارض بالمملكة.">
+    <meta name="twitter:image" content="https://pixelrehlaty.com/logos/logo.png">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="faq_docTitle">الأسئلة الشائعة | بكسل رحلتي</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* تنسيقات صفحة الأسئلة الشائعة */
+        .faq-search-wrapper { max-width: 650px; margin: 25px auto 0; position: relative; }
+        .faq-search-input { width: 100%; padding: 15px 25px 15px 50px; font-size: 15px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); color: #ffffff; outline: none; font-family: inherit; transition: all 0.3s ease; }
+        [dir="rtl"] .faq-search-input { padding: 15px 50px 15px 25px; }
+        .faq-search-input::placeholder { color: #e9d5ff; }
+        .faq-search-input:focus { background: rgba(255, 255, 255, 0.25); border-color: #d8b4fe; box-shadow: 0 0 20px rgba(216, 180, 254, 0.3); }
+        .faq-search-icon { position: absolute; top: 50%; left: 20px; transform: translateY(-50%); color: #e9d5ff; font-size: 18px; }
+        [dir="rtl"] .faq-search-icon { left: auto; right: 20px; }
+
+        .faq-list-container { max-width: 850px; margin: 0 auto; }
+        .faq-item-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(59, 7, 100, 0.05); transition: all 0.3s ease; }
+        .faq-item-box:hover { border-color: #e9d5ff; box-shadow: 0 15px 35px rgba(59, 7, 100, 0.1); }
+        .faq-item-box.active { border-color: #6b21a8; box-shadow: 0 10px 25px rgba(107, 33, 168, 0.08); }
+        .faq-btn-trigger { padding: 20px 24px; font-size: 17px; font-weight: 800; color: #1e1b4b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; background: transparent; width: 100%; border: none; text-align: inherit; font-family: inherit; }
+        .faq-btn-trigger i { color: #3b0764; font-size: 16px; transition: transform 0.3s ease; flex-shrink: 0; margin-inline-start: 15px; }
+        .faq-item-box.active .faq-btn-trigger i { transform: rotate(180deg); color: #6b21a8; }
+        .faq-content-body { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), padding 0.3s ease; padding: 0 24px; color: #64748b; font-size: 15px; line-height: 1.8; border-top: 1px solid transparent; }
+        .faq-item-box.active .faq-content-body { max-height: 500px; padding: 0 24px 20px 24px; border-top-color: #f5f3ff; }
+
+        .faq-help-banner { margin-top: 50px; background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border: 1px solid #e9d5ff; border-radius: 24px; padding: 40px 25px; text-align: center; }
+        .faq-help-banner h3 { font-size: 24px; font-weight: 900; color: #3b0764; margin-bottom: 10px; }
+        .faq-help-banner p { color: #64748b; font-size: 16px; margin-bottom: 24px; }
+
+        /* =========================================
+           أوامر إجبارية للأزرار العائمة وزر التقدم
+           ========================================= */
+        .floating-social { left: 25px !important; right: auto !important; }
+        [dir="rtl"] .floating-social { left: 25px !important; right: auto !important; }
+        
+        .scroll-progress { right: 30px !important; left: auto !important; background: conic-gradient(#9333ea 0%, #f5f3ff 0%); }
+        [dir="rtl"] .scroll-progress { right: 30px !important; left: auto !important; }
+        
+        .scroll-progress .progress-value { background-color: #3b0764 !important; color: #ffffff !important; }
+        .scroll-progress:hover .progress-value { background-color: #6b21a8 !important; }
+
+        /* =========================================
+           الفوتر البنفسجي الملكي (إجباري)
+           ========================================= */
+        .site-footer {
+            background: linear-gradient(135deg, #3b0764 0%, #1e1b4b 100%) !important; 
+            border-top: 2px solid #6b21a8 !important;
+            color: #e2e8f0 !important;
+        }
+        .site-footer h3 {
+            color: #ffffff !important;
+        }
+        .site-footer p {
+            color: #e2e8f0 !important;
+        }
+        .site-footer .footer-copy {
+            border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+            color: #cbd5e1 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ستارة الانتقال الانسيابية -->
+    <div class="page-transition-wrapper" id="pageTransition">
+        <div class="curtain curtain-right"></div>
+        <div class="curtain curtain-left"></div>
+        <div class="transition-content">
+            <img src="logos/logo.png" alt="Pixel Rehlaty Logo" class="curtain-logo">
+        </div>
+    </div>
+
+    <!-- مؤشر الفأرة الدائري -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- زر التقدم الدائري للعودة للأعلى (في اليمين) -->
+    <div class="scroll-progress" id="scrollProgress">
+        <div class="progress-value">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <!-- أيقونات التواصل العائمة (في اليسار) -->
+    <div class="floating-social">
+        <a href="https://wa.me/966500000000" target="_blank" class="floating-whatsapp" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/pixelrehlaty" target="_blank" class="floating-instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+
+    <!-- الهيدر الذكي -->
+    <header class="site-header theme-dark">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logos/logo.png" alt="Pixel Rehlaty Logo">
+                </a>
+            </div>
+
+            <nav class="desktop-nav" id="desktopNav">
+                <a href="index.html#hero" data-i18n="navHome">الرئيسية</a>
+                <a href="index.html#about" data-i18n="navAbout">من نحن</a>
+                <a href="index.html#services" data-i18n="navServices">الخدمات والشاشات</a>
+                <a href="faq.html" class="active" data-i18n="navFaq">الأسئلة الشائعة</a>
+                <a href="contact.html" data-i18n="navContact">تواصل معنا</a>
+                
+                <div class="nav-actions">
+                    <button class="lang-btn" id="langSwitchBtn" onclick="toggleLanguage()">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>English</span>
+                    </button>
+                </div>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- قسم الترويسة -->
+    <section class="inner-hero" data-theme="dark">
+        <div class="container">
+            <h1 data-i18n="faq_heroTitle">الأسئلة <span>الشائعة</span></h1>
+            <p data-i18n="faq_heroSubtitle">إجابات شاملة وسريعة عن كل ما يخص حجز وتجهيز شاشات العرض وتنظيم الفعاليات لفعاليتك.</p>
+            
+            <div class="faq-search-wrapper">
+                <input type="text" id="faqSearch" class="faq-search-input" placeholder="ابحث عن سؤالك هنا (مثلاً: أسعار، تركيب، P2)...">
+                <i class="fa-solid fa-magnifying-glass faq-search-icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة -->
+    <section class="section-padding" data-theme="light">
+        <div class="container">
+            <div class="faq-list-container" id="faqContainer"></div>
+
+            <div class="faq-list-container">
+                <div class="faq-help-banner">
+                    <h3 data-i18n="faq_helpTitle">لم تجد إجابة لسؤالك؟</h3>
+                    <p data-i18n="faq_helpSubtitle">طاقمنا الفني والهندسي متواجد على مدار الساعة للرد على استفساراتك وتزويدك بالمساعدة فوراً.</p>
+                    <a href="contact.html" class="btn-solid-purple" style="display: inline-block;">
+                        <i class="fa-solid fa-headset" style="margin-inline-end: 8px;"></i>
+                        <span data-i18n="faq_helpBtnText">تواصل معنا الآن</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر البنفسجي -->
+    <footer class="site-footer" data-theme="dark">
+        <div class="container footer-content">
+            <h3>بكسل رحلتي | PIXEL REHLATY</h3>
+            <p data-i18n="footerNote">لتأجير الشاشات وتنظيم الفعاليات والمعارض والمؤتمرات في المملكة العربية السعودية.</p>
+            <div class="footer-copy">
+                <p data-i18n="footerRights">جميع الحقوق محفوظة © 2026 بكسل رحلتي (PIXEL REHLATY)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="lang.js"></script>
+
+    <!-- السكربتات المجمعة والمنظمة -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            /* =========================================
+               1. الهيدر الذكي (تغيير الألوان حسب الخلفية)
+               ========================================= */
+            const header = document.querySelector('.site-header');
+            function updateHeaderTheme() {
+                const headerBottom = 85; 
+                let currentTheme = 'dark'; 
+                document.querySelectorAll('section, footer').forEach(sec => {
+                    const rect = sec.getBoundingClientRect();
+                    if (rect.top <= headerBottom && rect.bottom > 50) {
+                        const themeAttr = sec.getAttribute('data-theme');
+                        if (themeAttr) currentTheme = themeAttr;
+                    }
+                });
+                if (currentTheme === 'light') {
+                    header.classList.add('theme-light');
+                    header.classList.remove('theme-dark');
+                } else {
+                    header.classList.add('theme-dark');
+                    header.classList.remove('theme-light');
+                }
+            }
+            updateHeaderTheme();
+            window.addEventListener('scroll', updateHeaderTheme);
+
+            /* =========================================
+               2. زر التقدم الدائري (Scroll Progress)
+               ========================================= */
+            const scrollProgress = document.getElementById('scrollProgress');
+            if (scrollProgress) {
+                const updateProgress = () => {
+                    const scrollTotal = document.documentElement.scrollTop || document.body.scrollTop;
+                    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrollPercentage = height > 0 ? Math.round((scrollTotal / height) * 100) : 0;
+                    
+                    scrollProgress.style.background = `conic-gradient(#9333ea ${scrollPercentage}%, #f5f3ff ${scrollPercentage}%)`;
+                    
+                    if (scrollTotal > 100) scrollProgress.classList.add('active-progress');
+                    else scrollProgress.classList.remove('active-progress');
+                };
+                window.addEventListener('scroll', updateProgress);
+                scrollProgress.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            /* =========================================
+               3. حركة الماوس (العدسة الزجاجية)
+               ========================================= */
+            const cursor = document.getElementById('customCursor');
+            if (cursor && !window.matchMedia("(max-width: 992px)").matches) {
+                document.addEventListener('mousemove', (e) => {
+                    requestAnimationFrame(() => {
+                        cursor.style.left = e.clientX + 'px';
+                        cursor.style.top = e.clientY + 'px';
+                    });
+                });
+                const interactiveElements = document.querySelectorAll('a, button, input, .logo img, .pro-card, .partner-logo, .faq-btn-trigger');
+                interactiveElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+                    el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+                });
+                document.addEventListener('mouseout', () => cursor.style.opacity = '0');
+                document.addEventListener('mouseover', () => cursor.style.opacity = '1');
+            }
+
+            /* =========================================
+               4. ستارة الانتقال بين الصفحات
+               ========================================= */
+            const overlay = document.getElementById('pageTransition');
+            setTimeout(() => { if(overlay) overlay.classList.add('hidden'); }, 500);
+
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetHref = this.getAttribute('href');
+                    if (targetHref && !targetHref.includes('#') && !targetHref.startsWith('http') && !targetHref.startsWith('tel') && !targetHref.startsWith('mailto')) {
+                        e.preventDefault();
+                        if(overlay) overlay.classList.remove('hidden');
+                        setTimeout(() => { window.location.href = targetHref; }, 3000);
+                    }
+                });
+            });
+
+            /* =========================================
+               5. محرك البحث للأسئلة الشائعة
+               ========================================= */
+            const searchInput = document.getElementById('faqSearch');
+            if (searchInput) {
+                searchInput.addEventListener('keyup', function() {
+                    const filter = searchInput.value.toLowerCase();
+                    const faqBoxes = document.querySelectorAll('.faq-item-box');
+                    faqBoxes.forEach(box => {
+                        const text = box.textContent.toLowerCase();
+                        if (text.includes(filter)) box.style.display = "block";
+                        else box.style.display = "none";
+                    });
+                });
+            }
+        });
+
+        /* =========================================
+           6. بناء الأسئلة الشائعة من ملف lang.js
+           ========================================= */
+        function renderFAQs(faqList) {
+            const faqContainer = document.getElementById('faqContainer');
+            if (!faqContainer) return;
+            faqContainer.innerHTML = '';
+
+            faqList.forEach((item) => {
+                const faqBox = document.createElement('div');
+                faqBox.className = 'faq-item-box';
+                faqBox.innerHTML = `
+                    <button class="faq-btn-trigger" type="button">
+                        <span>${item.q}</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content-body">${item.a}</div>
+                `;
+
+                faqBox.querySelector('.faq-btn-trigger').addEventListener('click', () => {
+                    const isActive = faqBox.classList.contains('active');
+                    document.querySelectorAll('.faq-item-box').forEach(i => i.classList.remove('active'));
+                    if (!isActive) faqBox.classList.add('active');
+                });
+
+                faqContainer.appendChild(faqBox);
+            });
+        }
+    </script>
+</body>
+</html>
